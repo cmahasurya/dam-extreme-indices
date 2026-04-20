@@ -230,7 +230,7 @@ def plot_controls(key, default_color="#63b3ed", show_colormap=False):
 
         r3c1, r3c2, r3c3, r3c4 = st.columns(4)
         show_fill   = r3c1.checkbox("Show fill",  True,  key=f"{key}_sf")
-        show_trend  = r3c2.checkbox("Trend line", True,  key=f"{key}_st")
+        show_trend  = r3c2.checkbox("Trend line", True,  prefix = f"{key}_plot")
         grid_alpha  = r3c3.slider("Grid opacity", 0.0, 1.0, 0.25, 0.05, key=f"{key}_ga")
         colormap    = r3c4.selectbox("Colormap", COLORMAPS, key=f"{key}_cm") if show_colormap \
                       else "coolwarm"
