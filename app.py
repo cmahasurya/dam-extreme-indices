@@ -559,7 +559,7 @@ with t3:
         st.warning("No index category selected."); st.stop()
 
     hc1, hc2 = st.columns([2, 3])
-    heat_station  = hc1.selectbox("Station", selected_stations, key="hm_st")
+    heat_station  = hc1.selectbox("Station", selected_stations, key="hm_station")
     heat_indices  = hc2.multiselect("Indices", vis_indices,
                                     default=vis_indices[:min(6, len(vis_indices))],
                                     key="hm_idx")
